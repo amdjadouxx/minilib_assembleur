@@ -1,15 +1,19 @@
-WRITE : equ 1
-STDOUT: equ 1
+BITS 64
 
 section .text
-    global _write_it
+    global writeit
 
-    _write_it:
-    mov rax, WRITE
-    mov rdi, STDOUT
-    ;rsi define by main
-    ;rdx define by main
-    syscall
+    writeit:
 
-    mov rax, 0
-    ret
+        push rbp
+        mov rbp, rsp
+
+        mov rax, 1
+        ;rdi define in main
+        ;rsi define by main
+        ;rdx define by main
+        syscall
+
+        mov rax, 0
+        leave
+        ret
