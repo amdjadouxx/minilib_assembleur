@@ -19,16 +19,19 @@ $(NAME): $(OBJ)
 clean:
 	rm -rf $(OBJ)
 
-fclean: clean test_binary_clean
+ld_path_thing:
+	export LD_LIBRARY_PATH=.:$$LD_LIBRARY_PATH
+
+fclean: clean
 	rm -rf $(NAME)
 
 re: 	fclean all
 
-test_binary: 
+%.o : %.asm
+	nasm $(ASM_FLAG) -o $@ $<
+
+test_binary: all ld_path_thing
 	gcc -o main main.c -L. -lasm
 
 test_binary_clean:
 	rm $(NAME_TEST_BINARY)
-
-%.o : %.asm
-	nasm $(ASM_FLAG) -o $@ $<
