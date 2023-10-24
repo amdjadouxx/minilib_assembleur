@@ -20,7 +20,8 @@ clean:
 	rm -rf $(OBJ)
 
 ld_path_thing:
-	echo export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+#DONT COPY THE OTHER COMMAND, THIS ONE IS WITHOIT DISPLAY THINGS: export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+	echo export LD_LIBRARY_PATH=.:$$LD_LIBRARY_PATH
 
 fclean: clean
 	rm -rf $(NAME)
