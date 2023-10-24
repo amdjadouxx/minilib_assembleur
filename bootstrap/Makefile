@@ -20,7 +20,7 @@ clean:
 	rm -rf $(OBJ)
 
 ld_path_thing:
-	export LD_LIBRARY_PATH=.:$$LD_LIBRARY_PATH
+	echo export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 
 fclean: clean
 	rm -rf $(NAME)
@@ -30,7 +30,7 @@ re: 	fclean all
 %.o : %.asm
 	nasm $(ASM_FLAG) -o $@ $<
 
-test_binary: all ld_path_thing
+test_binary: all
 	gcc -o main main.c -L. -lasm
 
 test_binary_clean:
