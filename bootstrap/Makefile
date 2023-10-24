@@ -14,7 +14,7 @@ NAME_TEST_BINARY =			main
 all: $(NAME)
 
 $(NAME): $(OBJ)
-						ld -o $(NAME) -shared $(OBJ)
+		ld -o $(NAME) -shared $(OBJ)
 
 clean:
 	rm -rf $(OBJ)
