@@ -7,4 +7,15 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 BOOTSTRAP FINI
 
 ## TODO
-COMMENCER VRAI MINILIB ASM
+  -strncmp
+  -strcmp
+  -strcspn
+  -strchr
+  -strcasecmp
+  -rindex
+  -memset
+  -memcpy
+  -memove
+
+## ALREADY DID
+  -strlen
