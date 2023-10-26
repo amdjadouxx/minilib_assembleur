@@ -8,14 +8,23 @@ BOOTSTRAP FINI
 
 ## TODO
   -strncmp
+  
   -strcmp
+  
   -strcspn
+  
   -strchr
+  
   -strcasecmp
+  
   -rindex
+  
   -memset
+  
   -memcpy
+  
   -memove
 
 ## ALREADY DID
+
   -strlen
