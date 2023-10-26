@@ -1,7 +1,6 @@
 BITS 64
 
 section .text
-    global writeit
 
     strlen:
         xor rcx, rcx
