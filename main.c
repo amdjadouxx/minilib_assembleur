@@ -1,9 +1,8 @@
 #include <stdio.h>
 
-extern size_t strlen(const char *str);
+extern int my_strcmp(void);
 
 int main(void) {
-    const char *str = "Hello, World!\0";
-    printf("len of %s is %ld\n", str, strlen(str));
+    printf("%d\n", my_strcmp());
     return 0;
 }

@@ -1,21 +1,24 @@
 BITS 64
 
 section .data
-    s1 db "lom", 0
-    s2 db "lol", 0
+    s1 db "lol", 0
+    s2 db "lom", 0
 
 section .text
-    global _start
+    global my_strcmp
 
-    _start:
+    my_strcmp:
+        xor r8, r8
+        xor r9, r9
         xor rax, rax
         xor rdi, rdi
-        mov rax, s1
+        xor rsi, rsi
+        mov rdi, s1
         mov rsi, s2
         jmp loop_cmp
 
     loop_cmp:
-        mov r8b, [rax]
+        mov r8b, [rdi]
         mov r9b, [rsi]
         cmp r8b, r9b
         jne not_equal
@@ -23,17 +26,14 @@ section .text
         je exit_label
         cmp r9b, 0
         je exit_label
-        inc rax
+        inc rdi
         inc rsi
         jmp loop_cmp
 
     exit_label:
-        mov rax, 60
-        mov rdi, 0
-        syscall
+        ret
 
     not_equal:
-        mov rdi, [rax]
-        sub rdi, [rsi]
-        mov rax, 60
-        syscall
+        mov rax, r8
+        sub rax, r9
+        ret
