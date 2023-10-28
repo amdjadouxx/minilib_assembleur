@@ -24,7 +24,9 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
     export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH #ajouter ceci à .bashrc (pour que ce soit définitif)
 
   ### lier une libc (exemple: printf)
+
   nasm -f elf64 {fichier.asm}
+
   ld {fichier.o} -lc -dynamic-linker /lib64/ld-linux-x86-64.so.2
 
   ### Liens utiles
