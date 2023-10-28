@@ -11,6 +11,8 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 
   **Différents noms de labels entre fonctions d'un même librairie**
 
+  **La stack est comme une pile d'assiette, donc pour lire 1 puis 2 puis 3 on pushera 3 puis 2 puis 1**
+
   nom_label_exemple : loop_{nomdelafonction}
 
   ### Commandes utiles:
@@ -34,9 +36,6 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
   [L'ESSENTIEL](https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md)
 
 
-## ALREADY DID
-BOOTSTRAP FINI
-
 ## TODO  
   -strcspn
   
@@ -53,6 +52,8 @@ BOOTSTRAP FINI
   -memove
 
 ## ALREADY DID
+
+  Bootstrap fini
 
   -strlen
 
