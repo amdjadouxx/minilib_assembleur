@@ -1,2 +1,0 @@
-0~/delivery/mini_libc/bootstrap$nasm -f elf64 test_main.asm -o test_main.o                                               11:34PM
-0~/delivery/mini_libc/bootstrap$ld -o test_main test_main.o -lc -dynamic-linker /lib64/ld-linux-x86-64.so.2              11:35PM
