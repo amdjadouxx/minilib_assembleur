@@ -7,25 +7,24 @@ section .text
         xor r8, r8
         xor r9, r9
         xor rax, rax
-        jmp loop_cmp
 
-    loop_cmp:
+    loop_strcmp:
         mov r8b, [rdi]
         mov r9b, [rsi]
         cmp r8b, r9b
-        jne not_equal
+        jne not_equal_strcmp
         cmp r8b, 0
-        je exit_label
+        je exit_strcmp
         cmp r9b, 0
-        je exit_label
+        je exit_strcmp
         inc rdi
         inc rsi
-        jmp loop_cmp
+        jmp loop_strcmp
 
-    exit_label:
+    exit_strcmp:
         ret
 
-    not_equal:
+    not_equal_strcmp:
         mov rax, r8
         sub rax, r9
         ret

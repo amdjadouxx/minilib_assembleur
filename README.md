@@ -9,8 +9,6 @@ BOOTSTRAP FINI
 ## TODO
   -strncmp
   
-  -strcmp
-  
   -strcspn
   
   -strchr
@@ -28,3 +26,5 @@ BOOTSTRAP FINI
 ## ALREADY DID
 
   -strlen
+
+  -strcmp

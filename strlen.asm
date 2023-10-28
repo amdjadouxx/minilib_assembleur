@@ -1,18 +1,17 @@
 BITS 64
 
 section .text
-    global strlen
+    global my_strlen
 
-    strlen:
+    my_strlen:
         xor rcx, rcx
         xor rax, rax
 
-    loop:
-        mov rax, [rdi + rcx]
-        cmp rax, 0
+    loop_strlen:
+        cmp byte[rdi + rax], 0
         je end_strlen
-        inc rcx
-        jmp loop
+        inc rax
+        jmp loop_strlen
 
     end_strlen:
         ret

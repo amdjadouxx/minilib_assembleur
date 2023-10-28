@@ -2,7 +2,8 @@
 ASM_FLAG 		= 			-f elf64
 
 SRC 			= 			strlen.asm\
-							strcmp.asm
+							strcmp.asm\
+							strncmp.asm
 
 OBJ 			= 			$(SRC:.asm=.o)
 
@@ -33,7 +34,7 @@ re: 	fclean all
 	nasm $(ASM_FLAG) -o $@ $<
 
 test_binary: all
-	gcc -o main main.c -L. -lasm
+	gcc -o main main.c -L. -lasm -W -Wextra -Werror
 
 test_binary_clean:
 	rm $(NAME_TEST_BINARY)
