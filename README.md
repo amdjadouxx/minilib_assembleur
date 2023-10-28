@@ -14,9 +14,13 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
   nom_label_exemple : loop_{nomdelafonction}
 
   ### Commandes utiles:
-  voir tout les labels dispo dans une librairie: 
+
+  voir tout les labels dispo dans une librairie:
+
     nm -D {librairie}
+
   Problème lié à ld (NOT FOUND):
+
     ajouter ceci à bashrc: export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 
   ### lier une libc (exemple: printf)
