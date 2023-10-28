@@ -25,9 +25,9 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 
   ### lier une libc (exemple: printf)
 
-  nasm -f elf64 {fichier.asm} #au format 64 bits
+    nasm -f elf64 {fichier.asm} #au format 64 bits
 
-  ld {fichier.o} -lc -dynamic-linker /lib64/ld-linux-x86-64.so.2 #liaison d'une librairie dynamique
+    ld {fichier.o} -lc -dynamic-linker /lib64/ld-linux-x86-64.so.2 #liaison d'une librairie dynamique
 
   ### Liens utiles
 
