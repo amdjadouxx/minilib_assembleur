@@ -21,7 +21,7 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 
   Problème lié à ld (NOT FOUND):
 
-    ajouter ceci à bashrc: export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH #ajouter ceci à .bashrc (pour définitif)
 
   ### lier une libc (exemple: printf)
     nasm -f elf64 {fichier}.asm
