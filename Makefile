@@ -1,7 +1,8 @@
 #à faire
 ASM_FLAG 		= 			-f elf64
 
-SRC 			= 			strlen.asm
+SRC 			= 			strlen.asm\
+							strcmp.asm
 
 OBJ 			= 			$(SRC:.asm=.o)
 
