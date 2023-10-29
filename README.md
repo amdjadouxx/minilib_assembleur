@@ -39,8 +39,6 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 ## TODO  
   -strcspn
   
-  -strchr
-  
   -strcasecmp
   
   -rindex
@@ -60,3 +58,5 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
   -strcmp
 
   -strncmp
+
+  -strchr
