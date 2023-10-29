@@ -4,7 +4,7 @@ extern int my_strncmp(char *str1, char *str2, int n);
 extern int my_strcmp(char *str1, char *str2);
 extern size_t my_strlen(char *str);
 extern char *my_strchr(const char *str, char to_found);
-
+extern void my_memset(void *ptr, int val, size_t count);
 
 int main(void)
 {
@@ -21,6 +21,21 @@ int main(void)
     printf("my_strlen return for {Hello, World!}: {%ld}\n", my_strlen("Hello, World!\0"));
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
     printf("my_strchr return for {Hello, World!, ' '}: {%s}\n", my_strchr("Hello, World!\0", ' '));
+    printf("\n\n-----------------------------------------------------------------------------------\n\n");
+    int array[] = {54, 85, 20, 63, 21};
+    size_t size = sizeof(int) * 5;
+    int length;
+    printf("array before my_memset:\n");
+    for(length = 0; length < 5; length++) {
+        printf( "%d ", array[length]);
+    }
+    printf( "\n" );
+    my_memset(array, 0, size);
+    printf("array after my_memset:\n");
+    for (length = 0; length < 5; length++) {
+        printf("%d ", array[length]);
+    }
+    printf("\n");
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
     return 0;
 }
