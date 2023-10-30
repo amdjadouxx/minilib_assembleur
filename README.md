@@ -60,4 +60,4 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 
   -memcpy
 
-  -memmove (VRAIMENT DIFFICILE: compétences utilisés => (stack, boucle, registres))
+  -memmove (good training)
