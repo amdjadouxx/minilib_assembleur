@@ -4,14 +4,13 @@ BITS 64
 
 ;rdi string ptr
 ;rsi string ptr
-;rdx int
+;rdx int (counter)
 
 segment .text
     global my_strncmp
 
 my_strncmp:
     xor rax, rax
-
     xor r8, r8
     xor r9, r9
 
