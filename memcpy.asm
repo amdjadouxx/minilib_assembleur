@@ -1,7 +1,10 @@
 BITS 64
 
-;copy rsi's characters in rdx, rdi times
+;copy rsi's characters in rdi, rdx times
 
+;rdi void ptr
+;rsi void ptr
+;rdx int (counter)
 
 section .text
     global my_memcpy
