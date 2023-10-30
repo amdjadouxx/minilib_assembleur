@@ -2,8 +2,8 @@ BITS 64
 
 ;move RDX's caracteres of RSI into RDI
 
-;rdi void ptr
-;rsi void ptr (RSI can be RDI with an offset, tht's the difference with memcopy)
+;rdi void ptr (RDI and RSI can be in the same memory's zone)
+;rsi void ptr
 ;rdx size (RSI length)
 
 section .text
