@@ -1,6 +1,6 @@
 BITS 64
 
-;copy rsi's characters in rdi, rdx times
+;copy RSI characters in RDI, RDX times
 
 ;rdi void ptr
 ;rsi void ptr
