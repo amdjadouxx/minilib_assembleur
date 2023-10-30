@@ -1,6 +1,6 @@
 BITS 64
 
-;found length of rdi
+;found length of content in rdi
 
 section .text
     global my_strlen
