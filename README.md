@@ -46,7 +46,7 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 
 ## ALREADY DID
 
-  Bootstrap fini
+  * Bootstrap        difficulty: good to start
 
   * strlen           difficulty: ⭐
 
