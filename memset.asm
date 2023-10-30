@@ -1,9 +1,5 @@
 BITS 64
 
-rdi = endroit
-rsi = value
-rdx = count
-
 ;fill rdi with rsi content, rdx times
 
 section .text
