@@ -1,6 +1,10 @@
 BITS 64
 
-;compare a part of the content of rdi with a part of the content of rsi, rdx is the length of the part to compare 
+;compare a part of the content of rdi with a part of the content of rsi, rdx is the length of the part to compare
+
+;rdi string ptr
+;rsi string ptr
+;rdx int
 
 segment .text
     global my_strncmp
