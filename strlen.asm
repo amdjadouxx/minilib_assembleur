@@ -1,5 +1,7 @@
 BITS 64
 
+;found length of rdi
+
 section .text
     global my_strlen
 
