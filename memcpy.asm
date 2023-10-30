@@ -1,10 +1,10 @@
 BITS 64
 
-;copy RSI content in RDI, RDX times
+;copy RSI content in RDI
 
 ;rdi void ptr
 ;rsi void ptr
-;rdx int (counter)
+;rdx size (RSI length)
 
 section .text
     global my_memcpy
