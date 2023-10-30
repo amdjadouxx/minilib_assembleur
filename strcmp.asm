@@ -1,5 +1,7 @@
 BITS 64
 
+;compare content of rdi with content of rsi
+
 section .text
     global my_strcmp
 
