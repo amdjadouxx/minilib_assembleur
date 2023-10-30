@@ -4,7 +4,7 @@ BITS 64
 
 ;rdi void ptr (RDI and RSI can be in the same memory's zone)
 ;rsi void ptr
-;rdx size (RSI length)
+;rdx size (RSI's size)
 
 section .text
     global my_memmove
