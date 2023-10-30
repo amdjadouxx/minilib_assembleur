@@ -56,7 +56,7 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 
   -strchr difficulty: *
 
-  -memset (fonctionne avec 0 mais pas avec d'autre val) difficulty: * *
+  -memset (fonctionne avec 0 mais pas avec d'autre val) difficulty: * || * *
 
   -memcpy difficulty: * *
 
