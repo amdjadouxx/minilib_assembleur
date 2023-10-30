@@ -1,10 +1,10 @@
 BITS 64
 
-;compare a part of the content of RDI with a part of the content of RSI, RDX is the length of the part to compare
+;compare a part of the content of RDI with a part of the content of RSI. (RDX is the size of this part)
 
 ;rdi string ptr
 ;rsi string ptr
-;rdx int (counter)
+;rdx int (number of char to compare)
 
 segment .text
     global my_strncmp
