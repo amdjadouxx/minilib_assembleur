@@ -2,9 +2,9 @@ BITS 64
 
 ;move RDX's caracteres of RSI into RDI
 
-;rdi destination ptr
-;rsi source ptr
-;rdx counter size
+;rdi void ptr
+;rsi void ptr (RSI can be RDI with an offset, tht's the difference with memcopy)
+;rdx size (RSI length)
 
 section .text
     global my_memmove
