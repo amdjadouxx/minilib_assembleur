@@ -2,6 +2,9 @@ BITS 64
 
 ;compare content of rdi with content of rsi
 
+;rdi string ptr
+;rsi string ptr
+
 section .text
     global my_strcmp
 
