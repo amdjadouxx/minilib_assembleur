@@ -48,16 +48,16 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 
   Bootstrap fini
 
-  -strlen
+  -strlen difficulty: *
 
-  -strcmp
+  -strcmp difficulty: *
 
-  -strncmp
+  -strncmp difficulty: *
 
-  -strchr
+  -strchr difficulty: *
 
-  -memset (fonctionne avec 0 mais pas avec d'autre val)
+  -memset (fonctionne avec 0 mais pas avec d'autre val) difficulty: * *
 
-  -memcpy
+  -memcpy difficulty: * *
 
-  -memmove (good training)
+  -memmove (good training) difficulty: * * *
