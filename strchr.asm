@@ -1,5 +1,7 @@
 bits 64
 
+;search the first occurence of rsi in rdi and return the rest of the content after the first occurence  
+
 section .text
     global my_strchr    
 my_strchr:
