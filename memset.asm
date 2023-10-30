@@ -1,6 +1,10 @@
 BITS 64
 
-;fill rdi with rsi content, rdx times
+;fill RDI with RSI's characters, RDX times
+
+;rdi void ptr
+;rsi int (value to fill RDI)
+;rdx size (number of val to change)
 
 section .text
     global my_memset
