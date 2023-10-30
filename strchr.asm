@@ -2,6 +2,9 @@ BITS 64
 
 ;search the first occurence of rsi in rdi and move the pointer at the location of the first occurence
 
+;rsi string ptr
+;rdi int (char to found)
+
 section .text
     global my_strchr    
 my_strchr:
