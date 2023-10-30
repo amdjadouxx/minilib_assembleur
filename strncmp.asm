@@ -1,6 +1,6 @@
 BITS 64
 
-;compare a part of the content of rdi with a part of the content of rsi, rdx is the length of the part to compare
+;compare a part of the content of RDI with a part of the content of RSI, RDX is the length of the part to compare
 
 ;rdi string ptr
 ;rsi string ptr
