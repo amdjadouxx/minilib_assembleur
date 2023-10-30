@@ -7,6 +7,7 @@ extern size_t my_strlen(char *str);
 extern char *my_strchr(const char *str, int to_found);
 extern void my_memset(void *ptr, int val, size_t count);
 extern void my_memcpy(void * dest, const void * src, size_t size);
+extern void *my_memmove(void * destination, const void * source, size_t size);
 
 int main(void)
 {
@@ -52,8 +53,13 @@ int main(void)
         printf( "%d ", copy[ length ] );
     }
     printf( "\n" );
-        
+
     free( copy );
+    printf("\n\n-----------------------------------------------------------------------------------\n\n");
+    char str_memmove[] = "Hello, World!";
+    printf("string before memmove: {%s}\n", str_memmove);
+    my_memmove(str_memmove, str_memmove + 7, 5);
+    printf("string after memmove: {%s}\n", str_memmove);
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
     return 0;
 }
