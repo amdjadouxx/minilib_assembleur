@@ -1,6 +1,7 @@
 BITS 64
 
-;copier rsi in rdx, rdi times
+;copy rsi's characters in rdx, rdi times
+
 
 section .text
     global my_memcpy
