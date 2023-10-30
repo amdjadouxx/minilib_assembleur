@@ -8,8 +8,9 @@ BITS 64
 
 section .text
     global my_memmove
+
 my_memmove:
-	xor rcx, rcx
+    xor rcx, rcx
     mov rcx, rdx
     dec rcx
     xor r8, r8
