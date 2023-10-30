@@ -1,10 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 extern int my_strncmp(char *str1, char *str2, int n);
 extern int my_strcmp(char *str1, char *str2);
 extern size_t my_strlen(char *str);
-extern char *my_strchr(const char *str, char to_found);
+extern char *my_strchr(const char *str, int to_found);
 extern void my_memset(void *ptr, int val, size_t count);
+extern void my_memcpy(void * dest, const void * src, size_t size);
 
 int main(void)
 {
@@ -36,6 +38,22 @@ int main(void)
         printf("%d ", array[length]);
     }
     printf("\n");
+    printf("\n\n-----------------------------------------------------------------------------------\n\n");
+    int array_memcpy [] = { 54, 85, 20, 63, 21 };
+    int * copy = NULL;
+    int length_memcpy = sizeof( int ) * 5;
+       
+    /* Memory allocation and copy */
+    copy = (int *) malloc( length );
+    my_memcpy( copy, array_memcpy, length_memcpy );
+    
+    printf("copy after my_memcpy:\n");
+    for( length=0; length<5; length++ ) {
+        printf( "%d ", copy[ length ] );
+    }
+    printf( "\n" );
+        
+    free( copy );
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
     return 0;
 }
