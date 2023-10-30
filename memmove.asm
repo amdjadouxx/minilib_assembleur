@@ -2,9 +2,9 @@ BITS 64
 
 ;move RDX's caracteres of RSI into RDI
 
-;rdi destination
-;rsi source
-;rdx counter
+;rdi destination ptr
+;rsi source ptr
+;rdx counter size
 
 section .text
     global my_memmove
