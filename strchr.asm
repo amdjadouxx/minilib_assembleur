@@ -1,4 +1,4 @@
-bits 64
+BITS 64
 
 ;search the first occurence of rsi in rdi and move the pointer at the location of the first occurence
 
