@@ -2,7 +2,7 @@ BITS 64
 
 ;copy RSI content in RDI
 
-;rdi void ptr
+;rdi void ptr (RDI and RSI must not be in the same memory zone)  
 ;rsi void ptr
 ;rdx size (RSI length)
 
