@@ -46,18 +46,18 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 
 ## ALREADY DID
 
-  * Bootstrap        difficulty: *good to start*
+  * Bootstrap :        difficulty: *good to start*
 
-  * strlen           difficulty: ⭐
+  * Strlen :          difficulty: ⭐
 
-  * strcmp           difficulty: ⭐
+  * Strcmp :           difficulty: ⭐
 
-  * strncmp           difficulty: ⭐
+  * Strncmp :          difficulty: ⭐
 
-  * strchr           difficulty: ⭐
+  * Strchr :          difficulty: ⭐
 
-  * memset (fonctionne avec 0 mais pas avec d'autre val)           difficulty: ⭐ || ⭐⭐
+  * Memset : (fonctionne avec 0 uniquement)           difficulty: ⭐ || ⭐⭐
 
-  * memcpy           difficulty: ⭐⭐
+  * Memcpy :           difficulty: ⭐⭐
 
-  * memmove (good training)           difficulty: ⭐⭐⭐
+  * Memmove : (good training for final exam)           difficulty: ⭐⭐⭐
