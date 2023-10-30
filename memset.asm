@@ -4,7 +4,7 @@ BITS 64
 
 ;rdi void ptr
 ;rsi int (value to fill RDI)
-;rdx size (number of val to change)
+;rdx size (RDI's size)
 
 section .text
     global my_memset
