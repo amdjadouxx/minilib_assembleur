@@ -1,6 +1,6 @@
 BITS 64
 
-;compare content of rdi with content of rsi
+;compare content of RDI with content of RSI
 
 ;rdi string ptr
 ;rsi string ptr
