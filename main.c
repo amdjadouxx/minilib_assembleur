@@ -8,6 +8,7 @@ extern char *my_strchr(const char *str, int to_found);
 extern void my_memset(void *ptr, int val, size_t count);
 extern void my_memcpy(void * dest, const void * src, size_t size);
 extern void *my_memmove(void * destination, const void * source, size_t size);
+extern char *my_rindex(const char *str, int to_found);
 
 int main(void)
 {
@@ -60,6 +61,8 @@ int main(void)
     printf("string before memmove: {%s}\n", str_memmove);
     my_memmove(str_memmove, str_memmove + 7, 5);
     printf("string after memmove: {%s}\n", str_memmove);
+    printf("\n\n-----------------------------------------------------------------------------------\n\n");
+    printf("my_rindex return for {Hello, Worl d!, ' '}: {%s}\n", my_rindex("Hello, Worl d!\0", ' '));
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
     return 0;
 }
