@@ -17,7 +17,7 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 
   ### Commandes utiles:
 
-  voir tout les labels dispo dans une librairie:
+  Voir tout les labels dispo dans une librairie:
 
     nm -D {librairie}
 
@@ -43,10 +43,6 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
   
   -rindex
   
-  -memset
-  
-  -memcpy
-  
   -memove
 
 ## ALREADY DID
@@ -62,3 +58,5 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
   -strchr
 
   -memset (fonctionne avec 0 mais pas avec d'autre val)
+
+  -memcpy
