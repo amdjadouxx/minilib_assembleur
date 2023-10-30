@@ -1,4 +1,6 @@
-bits 64
+BITS 64
+
+;compare a part of the content of rdi with a part of the content of rsi, rdx is the length of the part to compare 
 
 segment .text
     global my_strncmp
