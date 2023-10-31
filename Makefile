@@ -8,7 +8,8 @@ SRC 			= 			strlen.asm\
 							memset.asm\
 							memcpy.asm\
 							memmove.asm\
-							rindex.asm
+							rindex.asm\
+							strcspn.asm
 
 OBJ 			= 			$(SRC:.asm=.o)
 
