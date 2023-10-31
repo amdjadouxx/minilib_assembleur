@@ -10,18 +10,19 @@ extern void my_memcpy(void * dest, const void * src, size_t size);
 extern void *my_memmove(void * destination, const void * source, size_t size);
 extern char *my_rindex(const char *str, int to_found);
 extern int my_strcspn(char *s1, char *s2);
+extern int my_strcasecmp(char *str1, char *str2);
 
 int main(void)
 {
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
-    printf("my_strcmp return for str1 == str2: {%d}\n", my_strcmp("Hello", "Hello"));
-    printf("my_strcmp return for str1 > str2: {%d}\n", my_strcmp("Hellom", "Hellol"));
-    printf("my_strcmp return for str1 < str2: {%d}\n", my_strcmp("Hellol", "Hellom"));
+    printf("my_strcmp return for str1 == str2: {%d}\n\n", my_strcmp("Hello", "Hello"));
+    printf("my_strcmp return for str1 > str2: {%d}\n\n", my_strcmp("Hellom", "Hellol"));
+    printf("my_strcmp return for str1 < str2: {%d}\n\n", my_strcmp("Hellol", "Hellom"));
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
-    printf("my_strncmp return for str1 == str2 && n = 0: {%d}\n", my_strncmp("Hello", "Hello", 0));
-    printf("my_strncmp return for str1 > str2 && n = 0: {%d}\n", my_strncmp("Hellom", "Hellol", 0));
-    printf("my_strncmp return for str1 < str2 && n = 0: {%d}\n", my_strncmp("Hellol", "Hellom", 0));
-    printf("my_strncmp return for str1 < str2 && n = 6 (len string): {%d}\n", my_strncmp("Hellol", "Hellom", 6));
+    printf("my_strncmp return for str1 == str2 && n = 0: {%d}\n\n", my_strncmp("Hello", "Hello", 0));
+    printf("my_strncmp return for str1 > str2 && n = 0: {%d}\n\n", my_strncmp("Hellom", "Hellol", 0));
+    printf("my_strncmp return for str1 < str2 && n = 0: {%d}\n\n", my_strncmp("Hellol", "Hellom", 0));
+    printf("my_strncmp return for str1 < str2 && n = 6 (len string): {%d}\n\n", my_strncmp("Hellol", "Hellom", 6));
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
     printf("my_strlen return for {Hello, World!}: {%ld}\n", my_strlen("Hello, World!\0"));
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
@@ -34,7 +35,7 @@ int main(void)
     for(length = 0; length < 5; length++) {
         printf( "%d ", array[length]);
     }
-    printf( "\n" );
+    printf( "\n\n" );
     my_memset(array, 0, size);
     printf("array after my_memset:\n");
     for (length = 0; length < 5; length++) {
@@ -50,7 +51,7 @@ int main(void)
     copy = (int *) malloc( length );
     my_memcpy( copy, array_memcpy, length_memcpy );
     
-    printf("copy after my_memcpy:\n");
+    printf("copy after my_memcpy:\n\n");
     for( length=0; length<5; length++ ) {
         printf( "%d ", copy[ length ] );
     }
@@ -59,7 +60,7 @@ int main(void)
     free( copy );
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
     char str_memmove[] = "Hello, World!";
-    printf("string before memmove: {%s}\n", str_memmove);
+    printf("string before memmove: {%s}\n\n", str_memmove);
     my_memmove(str_memmove, str_memmove + 7, 5);
     printf("string after memmove: {%s}\n", str_memmove);
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
