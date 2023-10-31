@@ -67,5 +67,7 @@ int main(void)
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
     printf("my_strcspn return for {Hello, World!., .}: {%d}\n", my_strcspn("Hello, World!.", "."));
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
+    printf("my_strcasecmp return for str1 == str2: {%d}\n", my_strcasecmp("HELLO\0", "hello\0"));
+    printf("\n\n-----------------------------------------------------------------------------------\n\n");
     return 0;
 }
