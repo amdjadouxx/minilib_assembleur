@@ -40,8 +40,6 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 
   * strcasecmp
 
-  * strcspn
-
 
 ## ALREADY DID
 
@@ -57,9 +55,10 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 
   * Rindex :  (inverse de strchr)         difficulty: ⭐
 
-
   * Memset : (fonctionne avec 0 uniquement)           difficulty: ⭐ || ⭐⭐
 
   * Memcpy :           difficulty: ⭐⭐
 
-  * Memmove : (good training for final exam)           difficulty: ⭐⭐⭐
+  * Strcspn : (good training for final test (loop with jmp in))           difficulty: ⭐⭐
+
+  * Memmove : (good training for final test ())           difficulty: ⭐⭐⭐
