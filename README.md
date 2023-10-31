@@ -61,4 +61,4 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 
   * Strcspn : (good training for final test (loop with jmp in))           difficulty: ⭐⭐
 
-  * Memmove : (good training for final test ())           difficulty: ⭐⭐⭐
+  * Memmove : (good training for final test (play with the stack))           difficulty: ⭐⭐⭐
