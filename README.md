@@ -38,8 +38,6 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
 
 ## TODO  
 
-  * strcasecmp
-
 
 ## ALREADY DID
 
@@ -56,6 +54,8 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
   * Rindex :  (inverse de strchr)         difficulty: ⭐
 
   * Memset : (fonctionne avec 0 uniquement)           difficulty: ⭐ || ⭐⭐
+
+  * Strcasecmp  (good training for final test (multiple levels cases in loop))           difficulty: ⭐ || ⭐⭐
 
   * Memcpy :           difficulty: ⭐⭐
 
