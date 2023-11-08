@@ -32,10 +32,10 @@ int main(void)
     size_t size = sizeof(int) * 5;
     int length;
     printf("array before my_memset:\n");
-    for(length = 0; length < 5; length++) {
+    for(int length = 0; length < 5; length++) {
         printf( "%d ", array[length]);
     }
-    printf( "\n\n" );
+    printf("\n\n");
     my_memset(array, 0, size);
     printf("array after my_memset:\n");
     for (length = 0; length < 5; length++) {
@@ -45,15 +45,15 @@ int main(void)
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
     int array_memcpy [] = { 54, 85, 20, 63, 21 };
     int * copy = NULL;
-    int length_memcpy = sizeof( int ) * 5;
+    int length_memcpy = sizeof(int) * 5;
        
     /* Memory allocation and copy */
-    copy = (int *) malloc( length );
-    my_memcpy( copy, array_memcpy, length_memcpy );
+    copy = (int *) malloc(length_memcpy);
+    my_memcpy(copy, array_memcpy, length_memcpy);
     
     printf("copy after my_memcpy:\n\n");
-    for( length=0; length<5; length++ ) {
-        printf( "%d ", copy[ length ] );
+    for(int length=0; length<5; length++) {
+        printf( "%d ", copy[length]);
     }
     printf( "\n" );
 
