@@ -36,6 +36,18 @@ exemple of minilib in asm for tech2 but remake it on tech2 beacuse the final tes
   [L'ESSENTIEL](https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md)
 
 
+### Les tailles de données
+
+1 octet/byte == 8 bits
+
+"db" (data byte) : Utilisé pour déclarer une unité de données de 8 bits (1 octet). Par exemple, my_byte db 65 déclare une variable de 8 bits et l'initialise avec la valeur 65.
+
+"dw" (data word) : Utilisé pour déclarer une unité de données de 16 bits (2 octets). Par exemple, my_word dw 1234 déclare une variable de 16 bits et l'initialise avec la valeur 1234.
+
+"dd" (data double word) : Utilisé pour déclarer une unité de données de 32 bits (4 octets). Par exemple, my_dword dd 1234567890 déclare une variable de 32 bits et l'initialise avec la valeur 1234567890.
+
+"dq" (data quadword) : Utilisé pour déclarer une unité de données de 64 bits (8 octets). Par exemple, my_qword dq 12345678901234567890 déclare une variable de 64 bits et l'initialise avec la valeur spécifiée.
+
 ## TODO  
 
 
