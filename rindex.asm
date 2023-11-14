@@ -12,9 +12,9 @@ loop_cmp_rindex:
     cmp byte [rdi], sil
     je change_rax_value
 checkpoint_in_loop:
-    inc rdi
     cmp byte [rdi], 0
     je end_rindex
+    inc rdi
     jmp loop_cmp_rindex
 change_rax_value:
     mov rax, rdi
