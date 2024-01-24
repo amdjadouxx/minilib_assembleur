@@ -8,7 +8,6 @@ section .text
     global my_strlen
 
     my_strlen:
-        xor rcx, rcx
         xor rax, rax
 
     loop_strlen:
