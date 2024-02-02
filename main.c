@@ -12,6 +12,7 @@ extern char *my_rindex(const char *str, int to_found);
 extern int my_strcspn(char *s1, char *s2);
 extern int my_strcasecmp(char *str1, char *str2);
 extern char *my_strstr(const char *haystack, const char *needle); //NEW
+extern char *my_strpbrk(const char *s, const char *accept); //NEW
 
 int main(void)
 {
@@ -48,8 +49,7 @@ int main(void)
     int array_memcpy [] = { 54, 85, 20, 63, 21 };
     int * copy = NULL;
     int length_memcpy = sizeof(int) * 5;
-       
-    /* Memory allocation and copy */
+
     copy = (int *) malloc(length_memcpy);
     my_memcpy(copy, array_memcpy, length_memcpy);
     
@@ -77,6 +77,13 @@ int main(void)
     printf("my_strstr return for {Hello, World!, World}: {%s}\n", my_strstr("Hello, World!\0", "World"));
     printf("my_strstr return for {Hello, World!, ok}: {%s}\n", my_strstr("Hello, World!\0", "ok"));    
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
-// 
-    // return 0;
+    printf("my_strpbrk return for {Hello, World!, World}: {%c}\n", *my_strpbrk("abcef, World!", "World"));
+    if (my_strpbrk("Hello, World!", "k") == NULL) {
+        printf("my_strpbrk return for {Hello, World!, k}: {NULL}\n");
+    } else {
+        printf("my_strpbrk{Hello, World!, k} MUST RETURN NULL\n");
+    }
+    printf("\n\n-----------------------------------------------------------------------------------\n\n");
+
+    return 0;
 }
