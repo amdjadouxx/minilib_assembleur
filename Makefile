@@ -1,4 +1,10 @@
-#à faire
+##
+## EPITECH PROJECT, 2024
+## minilib_asm
+## File description:
+## Makefile
+##
+
 ASM_FLAG 		= 			-f elf64
 
 SRC 			= 			strlen.asm\
@@ -10,7 +16,8 @@ SRC 			= 			strlen.asm\
 							memmove.asm\
 							rindex.asm\
 							strcspn.asm\
-							strcasecmp.asm
+							strcasecmp.asm\
+							strstr.asm\
 
 OBJ 			= 			$(SRC:.asm=.o)
 

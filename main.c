@@ -11,6 +11,7 @@ extern void *my_memmove(void * destination, const void * source, size_t size);
 extern char *my_rindex(const char *str, int to_found);
 extern int my_strcspn(char *s1, char *s2);
 extern int my_strcasecmp(char *str1, char *str2);
+extern char *my_strstr(const char *haystack, const char *needle); //NEW
 
 int main(void)
 {
@@ -23,6 +24,7 @@ int main(void)
     printf("my_strncmp return for str1 > str2 && n = 0: {%d}\n\n", my_strncmp("Hellom", "Hellol", 0));
     printf("my_strncmp return for str1 < str2 && n = 0: {%d}\n\n", my_strncmp("Hellol", "Hellom", 0));
     printf("my_strncmp return for str1 < str2 && n = 6 (len string): {%d}\n\n", my_strncmp("Hellol", "Hellom", 6));
+    printf("my_strncmp return for str1 < str2 && n = 6 (len string): {%d}\n\n", my_strncmp("l", "m", 6));
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
     printf("my_strlen return for {Hello, World!}: {%ld}\n", my_strlen("Hello, World!\0"));
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
@@ -69,6 +71,12 @@ int main(void)
     printf("my_strcspn return for {Hello, World!., .}: {%d}\n", my_strcspn("Hello, World!.", "."));
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
     printf("my_strcasecmp return for str1 == str2: {%d}\n", my_strcasecmp("HELLO\0", "hello\0"));
+    printf("my_strcasecmp return for str1 > str2: {%d}\n", my_strcasecmp("HELLOl\0", "hello\0"));
     printf("\n\n-----------------------------------------------------------------------------------\n\n");
-    return 0;
+    printf("my_strstr return for {Wesh!, Wesh}: {%s}\n", my_strstr("mWesh!\0", "Wesh"));
+    printf("my_strstr return for {Hello, World!, World}: {%s}\n", my_strstr("Hello, World!\0", "World"));
+    printf("my_strstr return for {Hello, World!, ok}: {%s}\n", my_strstr("Hello, World!\0", "ok"));    
+    printf("\n\n-----------------------------------------------------------------------------------\n\n");
+// 
+    // return 0;
 }
