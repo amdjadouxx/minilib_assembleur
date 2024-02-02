@@ -21,13 +21,13 @@ loop_strncmp:
     mov r9b, [rsi]
     cmp r8b, r9b
     jne not_equal_strncmp
+    inc rdi
+    inc rsi
+    dec rdx
     cmp r8b, 0
     je exit_strncmp
     cmp r9b, 0
     je exit_strncmp
-    inc rdi
-    inc rsi
-    dec rdx
     jmp loop_strncmp
 exit_strncmp:
     ret
