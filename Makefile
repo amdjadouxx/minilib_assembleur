@@ -1,34 +1,35 @@
 ##
 ## EPITECH PROJECT, 2024
-## minilib_asm
+## B-ASM-400-RUN-4-1-asmminilibc-amdjad.ahmod-ali
 ## File description:
 ## Makefile
 ##
 
+
 ASM_FLAG 		= 			-f elf64
 
 SRC 			= 			strlen.asm\
-							strcmp.asm\
-							strncmp.asm\
 							strchr.asm\
+							strrchr.asm\
 							memset.asm\
 							memcpy.asm\
+							strcmp.asm\
 							memmove.asm\
-							rindex.asm\
-							strcspn.asm\
+							strncmp.asm\
 							strcasecmp.asm\
 							strstr.asm\
 							strpbrk.asm\
+							strcspn.asm\
+							bonus/my_getnbr.asm\
+							bonus/my_revstr.asm
+							
+
 
 OBJ 			= 			$(SRC:.asm=.o)
 
 NAME 			=			 libasm.so
 
-MAIN_TEST_FILE	= 			main.c
-
-NAME_TEST_BINARY =			main
-
-all: $(NAME) test_binary
+all: $(NAME)
 
 $(NAME): $(OBJ)
 		ld -o $(NAME) -shared $(OBJ)
@@ -36,21 +37,10 @@ $(NAME): $(OBJ)
 clean:
 	rm -rf $(OBJ)
 
-ld_path_thing:
-#DONT COPY THE DISPLAY COMMAND!!
-#THIS ONE IS WITHOUT DISPLAY THINGS: export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
-	echo export LD_LIBRARY_PATH=.:$$LD_LIBRARY_PATH
+fclean: clean
+		rm -rf $(NAME)
 
-fclean: clean test_binary_clean
-	rm -rf $(NAME)
-
-re: 	fclean all
+re: fclean all
 
 %.o : %.asm
 	nasm $(ASM_FLAG) -o $@ $<
-
-test_binary:
-	gcc -o main main.c -L. -lasm -W -Wextra -Werror
-
-test_binary_clean:
-	rm $(NAME_TEST_BINARY)

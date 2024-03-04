@@ -1,15 +1,9 @@
 BITS 64
 
-;copy RSI content in RDI
-
-;rdi void ptr (RDI and RSI must not be in the same memory's zone)  
-;rsi void ptr
-;rdx size (RSI's size)
-
 section .text
-    global my_memcpy
+    global memcpy
 
-    my_memcpy:
+    memcpy:
         xor rax, rax
         mov rax, rdi
         xor rcx, rcx

@@ -1,39 +1,37 @@
 BITS 64
 
-;move RDX's caracteres of RSI into RDI
-
-;rdi void ptr (RDI and RSI can be in the same memory's zone)
-;rsi void ptr
-;rdx size (RSI's size)
-
 section .text
-    global my_memmove
+    global memmove
 
-my_memmove:
-    xor rcx, rcx
-    mov rcx, rdx
-    dec rcx
-    xor r8, r8
+memmove:
+    xor rax, rax
+    mov rax, rdi
+    mov rcx, rdi
+    sub rcx, rsi
+    cmp rcx, 0
+    jl forward_memmove
 
-stack_push_loop_memmove:
-    cmp rcx, -1
-    je insert_value_memmove
-    mov r8b ,byte [rsi + rcx]
-    push r8
-    dec rcx
-    jmp stack_push_loop_memmove
+backward_memmove:
+    dec rdx
 
-insert_value_memmove:
+loop_backward_memmove:
+    cmp rdx, 0
+    jl end_memmove
+    mov r8b, [rsi + rdx]
+    mov [rdi + rdx], r8b
+    dec rdx
+    jmp loop_backward_memmove
+
+forward_memmove:
     mov rcx, 0
-    jmp loop_change_val_memmove
 
-loop_change_val_memmove:
+loop_forward_memmove:
     cmp rcx, rdx
     je end_memmove
-    pop rax
-    mov byte [rdi +rcx], al
+    mov r8b, [rsi + rcx]
+    mov [rdi + rcx], r8b
     inc rcx
-    jmp loop_change_val_memmove
+    jmp loop_forward_memmove
 
 end_memmove:
     ret

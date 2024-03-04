@@ -1,9 +1,9 @@
 BITS 64
  
 section .text
-    global my_Revstr
+    global my_revstr
  
-my_Revstr:
+my_revstr:
     init_rev:
         xor r8, r8
         xor rcx, rcx

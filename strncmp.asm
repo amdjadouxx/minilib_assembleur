@@ -1,15 +1,9 @@
 BITS 64
 
-;compare a part of the content of RDI with a part of the content of RSI. (RDX is the size of this part)
-
-;rdi string ptr
-;rsi string ptr
-;rdx int (number of char to compare)
-
 segment .text
-    global my_strncmp
+    global strncmp
 
-my_strncmp:
+strncmp:
     xor rax, rax
     xor r8, r8
     xor r9, r9
@@ -35,4 +29,3 @@ not_equal_strncmp:
     mov rax, r8
     sub rax, r9
     ret
-    

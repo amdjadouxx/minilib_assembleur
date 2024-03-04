@@ -1,15 +1,9 @@
 BITS 64
 
-;fill RDI with RSI's characters, RDX times
-
-;rdi void ptr
-;rsi int (value to fill RDI)
-;rdx size (RDI's size)
-
 section .text
-    global my_memset
+    global memset
 
-my_memset:
+memset:
     xor rax, rax
     xor rcx, rcx
 

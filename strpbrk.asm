@@ -1,13 +1,9 @@
 BITS 64
 
-;rdi - string where to search
-;rsi - string with characters to search for
-;return - pointer to the first occurrence of any character from s2 in s1, or NULL if no such character is found
-
-global my_strpbrk
+global strpbrk
 section .text
 
-my_strpbrk:
+strpbrk:
     xor rax, rax
     xor rcx, rcx
     xor rdx,rdx
@@ -19,11 +15,11 @@ continue_loop_strpbrk:
     jmp loop_strpbrk
 
 loop_strpbrk:
-    cmp rsi, 0
+    cmp byte[rsi], 0
+    je end_strpbrk_not_found
+    cmp byte[rdi + rcx], 0
     je end_strpbrk_not_found
     mov al, byte[rdi + rcx]
-    cmp al, 0
-    je end_strpbrk_not_found
     jmp loop_cmp_strpbrk
 
 loop_cmp_strpbrk:

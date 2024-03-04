@@ -1,13 +1,9 @@
 BITS 64
 
-;found length of content in rdi
-
-;rdi string ptr
-
 section .text
-    global my_strlen
+    global strlen
 
-    my_strlen:
+    strlen:
         xor rax, rax
 
     loop_strlen:

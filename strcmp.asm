@@ -1,14 +1,9 @@
 BITS 64
 
-;compare content of RDI with content of RSI
-
-;rdi string ptr
-;rsi string ptr
-
 section .text
-    global my_strcmp
+    global strcmp
 
-    my_strcmp:
+    strcmp:
         xor r8, r8
         xor r9, r9
         xor rax, rax
@@ -27,6 +22,7 @@ section .text
         jmp loop_strcmp
 
     exit_strcmp:
+        mov rax, 0
         ret
 
     not_equal_strcmp:

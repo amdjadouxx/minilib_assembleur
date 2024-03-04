@@ -1,4 +1,4 @@
-my_Getnbr:
+my_getnbr:
     xor rax, rax
     xor rcx, rcx
 

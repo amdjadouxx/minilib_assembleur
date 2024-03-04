@@ -1,14 +1,9 @@
 BITS 64
 
-; return the length before finding one of RSI's characters in RDI
-
-;rdi string ptr
-;rsi string ptr (all chars to found (one has to be found not all))
-
 section .text
-    global my_strcspn
+    global strcspn
 
-my_strcspn:
+strcspn:
     xor rax, rax
     xor rcx, rcx
     xor r8, r8

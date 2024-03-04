@@ -1,26 +1,21 @@
-BITS 64
-
-;search the first occurence of RSI in RDI and return RDI + (first location of RSI)
-
-;rdi string ptr
-;rsi int (char to found)
-
+global strchr
 section .text
-    global my_strchr    
-my_strchr:
+
+strchr:
     mov rax, rdi
+    jmp loop_main_strchr
 
-loop_strchr:
-    cmp byte[rax], 0
-    je end_str_strchr
+loop_main_strchr:
     cmp byte[rax], sil
-    je end_strchr
+    je end_success
+    cmp byte[rax], 0
+    je end_failed
     inc rax
-    jmp loop_strchr
+    jmp loop_main_strchr
 
-end_strchr:
-    ret
-end_str_strchr:
-    mov rax, 0
-    ret
+    end_success:
+        ret
 
+    end_failed:
+        xor rax, rax
+        ret
