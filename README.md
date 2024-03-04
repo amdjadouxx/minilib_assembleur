@@ -1,7 +1,5 @@
 # minilib_asm
 
-# MY_CONVENTION + tips
-  
 ## tips
 
   **Réinitialiser tout les registres avant de les utiliser!!**
