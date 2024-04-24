@@ -28,7 +28,8 @@ List of functions re-implemented:
 
 ### Some links
 
-[Documentation](https://chromium.googlesource.com/chromiumos/docs/+/HEAD/constants/syscalls.md)
+[Documentation française](https://github.com/amdjadouxx/asm_workshop/blob/main/Help.md)
+[Liens utiles](https://www.chromium.org/chromium-os/developer-library/reference/linux-constants/syscalls/)
 
 
 ## Tips/Astuces
