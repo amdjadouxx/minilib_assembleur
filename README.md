@@ -2,7 +2,7 @@
 This project has been produce for the x86-64 structure (on linux)
 
 ## Help.md
-  if you want to start assembly, I made a french documentation on **assembly** on "Help.md" (A file in this repository)
+  if you want to start assembly, I made a french documentation on **assembly** [here](https://github.com/amdjadouxx/asm_workshop/blob/main/Help.md)
 
 This is a shared library, which implement my version (in **assembly** language) of some functions of the **C** library
 
